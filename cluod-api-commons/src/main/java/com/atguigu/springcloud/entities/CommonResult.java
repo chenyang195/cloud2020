@@ -1,0 +1,23 @@
+package com.atguigu.springcloud.entities;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+/**
+ * @Author : YangChen
+ * @Description :
+ * @Date: Created in 18:04 2020/3/31
+ */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class CommonResult<T> {
+    private Integer code;
+    private String message;
+    private T data;
+
+    private CommonResult(Integer code,String message){
+       this(code,message,null);
+    }
+}
